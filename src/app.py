@@ -10,11 +10,11 @@ def root():
 @app.route('/feed', methods=['GET'])
 def feed():
   organizations = request.args['organizations'].split(',')
-  feeds = map(lambda org: get_feed(org, request.headers.get('Authorization').json()), organizations)
+  feeds = map(lambda org: get_feed(org, request.headers.get('Authorization')), organizations)
   feed = sum(feeds, [])
   return jsonify(sorted(feed, key=lambda item: item['created_at'], reverse=True))
 
 @app.route('/feed/<organization>', methods=['GET'])
 def organization_feed(organization):
-  r = get_feed(organization, request.headers.get('Authorization'))
-  return r.content, r.status_code, {'Content-Type': 'application/json'}
+  feed = get_feed(organization, request.headers.get('Authorization'))
+  return jsonify(feed)
