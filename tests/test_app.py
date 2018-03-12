@@ -16,9 +16,3 @@ def test_root_message(client):
   res = client.get('/')
   data = json.loads(res.data)
   assert data["message"] == "Feed service up and running"
-
-def test_feed(client):
-  """Test that feed route returns a list of events"""
-  res = client.get('/feed/orghub-app')
-  data = json.loads(res.data)
-  assert type(data) is list
