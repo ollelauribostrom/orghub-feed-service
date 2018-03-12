@@ -1,0 +1,7 @@
+{
+  "name": "orghub-auth-service",
+  "alias": "orghub-authservice.now.sh",
+  "dotenv": true,
+  "public": true,
+  "type": "docker"
+}
