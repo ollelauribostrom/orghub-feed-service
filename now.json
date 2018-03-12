@@ -1,6 +1,6 @@
 {
-  "name": "orghub-auth-service",
-  "alias": "orghub-authservice.now.sh",
+  "name": "orghub-feed-service",
+  "alias": "orghub-feed.now.sh",
   "dotenv": true,
   "public": true,
   "type": "docker"
