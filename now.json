@@ -1,6 +1,6 @@
 {
   "name": "orghub-feed-service",
-  "alias": "orghub-feed.now.sh",
+  "alias": "orghub-feed-service.now.sh",
   "public": true,
   "type": "docker"
 }
