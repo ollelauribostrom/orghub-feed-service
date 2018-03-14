@@ -2,8 +2,10 @@ import requests
 from flask import abort
 
 def tracked_type(event):
-  return event['type'] in ['IssueCommentEvent', 'IssuesEvent', 'PullRequestEvent', 'PullRequestReviewEvent',
-    'PullRequestReviewCommentEvent', 'PushEvent']
+  if 'type' in event:
+    return event['type'] in ['IssueCommentEvent', 'IssuesEvent', 'PullRequestEvent',
+      'PullRequestReviewEvent', 'PullRequestReviewCommentEvent', 'PushEvent']
+  return False
 
 def get_username(headers):
   url = 'https://api.github.com/user'
