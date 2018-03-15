@@ -1,5 +1,14 @@
 # orghub/feed-service
-_todo_
+Feed Service for OrgHub app
+
+> Deployed @ https://orghub-feed-service.now.sh
+
+Endpoints
+---------
+| Endpoint              | Method    |
+|:--------------------- |:----------|
+| /feed                 | GET       |
+| /feed/:org            | GET       |
 
 
 Commands
